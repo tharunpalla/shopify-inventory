@@ -20,7 +20,7 @@ The application requries python 3.6 or higher to run. You can download and insta
 
 1. Install `virtualenv`:
 ```
-$ pip install virtualenv
+$ pip3 install virtualenv
 ```
 
 2. Open a terminal in the project root directory and run:
@@ -35,12 +35,12 @@ $ source env/bin/activate or .\env\Scripts\activate
 
 4. Then install the dependencies:
 ```
-$ pip install -r requirements.txt
+$ pip3 install -r requirements.txt
 ```
 
 5. Finally start the web server:
 ```
-$ python app.py
+$ python3 app.py
 ```
 
 This server will start on port 5000 by default. You can change this in `app.py` by changing the following line to this:
