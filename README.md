@@ -2,6 +2,9 @@
 
 Logistic Inventory CRUD application that meets the following requirements listed below.
 
+
+#### The application is deployed on heroku. You can access it using : https://shopify-inventory-crud.herokuapp.com/
+
 ### Requirements:
 Basic CRUD Functionality.
 1. Create inventory items
@@ -9,8 +12,6 @@ Basic CRUD Functionality.
 3. Delete Them
 4. View a list of them
 5. (Additional) Push a button export product data to a CSV
-
-#### The application is deployed on heroku. You can access it using : https://shopify-inventory-crud.herokuapp.com/
 
 
 ### How To Run
