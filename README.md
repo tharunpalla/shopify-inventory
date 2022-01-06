@@ -3,6 +3,9 @@
 Logistic Inventory CRUD application 
 
 ### How To Run
+
+The application requries python 3.6 or higher to run. You can download and install python from : https://www.python.org/downloads/release/python-3615/
+
 1. Install `virtualenv`:
 ```
 $ pip install virtualenv
