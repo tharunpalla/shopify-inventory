@@ -11,17 +11,17 @@
     </div>
     <form action="/update/{{inventory._id}}" method="POST" class="inventory-form">
         <label class="inventory-add-label">Product Name:</label>
-        <input class="form-control" type="text" name="product_name" id="product_name" value={{inventory.product_name}}
+        <input class="form-control" type="text" name="product_name" id="product_name" value="{{inventory.product_name}}"
             required>
         <label class="inventory-add-label">Product Category:</label>
-        <input class="form-control" type="text" name="product_category" id="product_category"
-            value={{inventory.product_category}} required>
+        <input class="form-control" type="text" name="product_category" id="product_category" value="{{inventory.product_category}}" required>
         <label class="inventory-add-label">Product Code:</label>
-        <input class="form-control" type="number" name="product_code" id="product_code" value={{inventory.product_code}}
+        <input class="form-control" type="number" min="0" name="product_code" id="product_code" value="{{inventory.product_code}}"
             required>
         <label class="inventory-add-label">Available Units:</label>
-        <input class="form-control" type="number" name="available_units" id="available_units"
-            value={{inventory.available_units}} required>
+        <input class="form-control" type="number" min="0" name="available_units" id="available_units" value="{{inventory.available_units}}" required>
+            <label class="inventory-add-label">Comments:</label>
+        <input class="form-control" type="text" name="comments" id="comments" value="{{inventory.comments}}">
         <label class="inventory-add-label"></label>
         <input type="submit" class="btn btn-info" value="Update">
     </form>

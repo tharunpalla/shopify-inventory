@@ -32,6 +32,7 @@
                     <th scope="col">Product Category</th>
                     <th scope="col">Product Code</th>
                     <th scope="col">Available Units</th>
+                    <th scope="col">Comments</th>
                     <th scope="col">Date Created</th>
                 </tr>
             </thead>
@@ -42,6 +43,7 @@
                         <td>{{ inventory.product_category }}</td>
                         <td>{{ inventory.product_code }}</td>
                         <td>{{ inventory.available_units }}</td>
+                        <td>{{ inventory.comments }}
                         <td>{{ inventory.date_created }}</td>
                         <td><a href="/delete/{{inventory._id}}" class="btn btn-danger">Delete</a></td>
                         <td><a href="/update/{{inventory._id}}" class="btn btn-info">Update</a></td>

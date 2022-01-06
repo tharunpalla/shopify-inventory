@@ -29,8 +29,9 @@ def add():
             product_category = request.form['product_category']
             product_code = request.form['product_code']
             available_units = request.form['available_units']
+            comments = request.form['comments']
             db_collection.insert_one(create_new_inventory(
-                product_name, product_category, product_code, available_units))
+                product_name, product_category, product_code, available_units, comments))
             return redirect('/')
         except:
             return 'There was an issue adding your inventory'
@@ -38,11 +39,12 @@ def add():
         return render_template('add.html')
 
 
-def create_new_inventory(product_name, product_category, product_code, available_units):
+def create_new_inventory(product_name, product_category, product_code, available_units, comments):
     return {"product_name": product_name,
             "product_category": product_category,
             "product_code": product_code,
             "available_units": available_units,
+            "comments": comments,
             "date_created": datetime.utcnow().strftime("%m-%d-%Y")}
 
 
@@ -63,8 +65,9 @@ def update(id):
             product_category = request.form['product_category']
             product_code = request.form['product_code']
             available_units = request.form['available_units']
+            comments = request.form['comments']
             inventory = create_new_inventory(
-                product_name, product_category, product_code, available_units)
+                product_name, product_category, product_code, available_units, comments)
             db_collection.update_one({'_id': ObjectId(id)}, {
                                      '$set': inventory
                                      })
@@ -74,6 +77,7 @@ def update(id):
     else:
         try:
             inventory = db_collection.find_one({'_id': ObjectId(id)})
+            print(inventory)
             return render_template('update.html', inventory=inventory)
         except:
             return 'There was an issue getting your inventory'
