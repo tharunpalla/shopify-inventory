@@ -46,3 +46,5 @@ This server will start on port 5000 by default. You can change this in `app.py` 
 ```python
 if __name__ == "__main__":
     app.run(debug=True, port=<desired port>)
+    
+Open http://localhost:5000/ on your browser to access the inventory application
