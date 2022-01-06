@@ -86,7 +86,6 @@ def export():
     docs.pop("_id")
     excel_file = io.StringIO()
     docs.to_csv(excel_file, sep=',', encoding='utf-8', index=False)
-    print(excel_file.getvalue())
     response = make_response(excel_file.getvalue())
     excel_file.close()
     cd = 'attachment; filename=inventory.csv'
