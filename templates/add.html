@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+
+{% block head %}
+<title>Logistics Inventory</title>
+{% endblock %}
+
+{% block body %}
+<div class="inventory-body">
+    <div class="inventory-heading">
+        <h3>Add an item to Inventory</h3>
+    </div>
+    <form action="/add" method="POST" class="inventory-form">
+        <label class="inventory-add-label">Product Name:</label>
+        <input class="form-control" type="text" name="product_name" id="product_name" required>
+        <label class="inventory-add-label">Product Category:</label>
+        <input class="form-control" type="text" name="product_category" id="product_category" required>
+        <label class="inventory-add-label">Product Code:</label>
+        <input class="form-control" type="number" name="product_code" id="product_code" required>
+        <label class="inventory-add-label">Available Units:</label>
+        <input class="form-control" type="number" name="available_units" id="available_units" required>
+        <label class="inventory-add-label"></label>
+        <input type="submit" class="btn btn-primary" value="Add">
+    </form>
+</div>
+{% endblock %}

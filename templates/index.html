@@ -1,0 +1,56 @@
+{% extends 'base.html' %}
+
+{% block head %}
+<title>Logistics Inventory</title>
+{% endblock %}
+
+{% block body %}
+<div class="inventory-body">
+    <div class="inventory-heading nav">
+        <h3>Shopify Logistic Inventory</h3>
+    </div>
+    {% if inventory_list|length < 1 %} 
+    <div class="inventory-content-empty">
+        <h4>There are no items in the inventory. Create one below!</h4>
+        <a href="/add" class="btn btn-primary">Add new item</a>
+    </div>
+    {% else %}
+    <div class="inventory-content">
+        <div class=inventory-headline>
+            <div>
+                <a href="/add" class="btn btn-primary">Add new item</a>
+            </div>
+            <div>
+                <a href="/export" class="btn btn-success">Export to CSV</a>
+            </div>
+        </div>
+        <div class="inventory-table">
+            <table class="table">
+            <thead>
+                <tr>
+                    <th scope="col">Product Name</th>
+                    <th scope="col">Product Category</th>
+                    <th scope="col">Product Code</th>
+                    <th scope="col">Available Units</th>
+                    <th scope="col">Date Created</th>
+                </tr>
+            </thead>
+                {% for inventory in inventory_list %}
+                <tbody>
+                    <tr scope="row">
+                        <td>{{ inventory.product_name }}</td>
+                        <td>{{ inventory.product_category }}</td>
+                        <td>{{ inventory.product_code }}</td>
+                        <td>{{ inventory.available_units }}</td>
+                        <td>{{ inventory.date_created }}</td>
+                        <td><a href="/delete/{{inventory._id}}" class="btn btn-danger">Delete</a></td>
+                        <td><a href="/update/{{inventory._id}}" class="btn btn-info">Update</a></td>
+                    </tr>
+                </tbody>
+                {% endfor %}
+            </table>
+        </div>
+    </div>    
+    {% endif %}
+</div>
+{% endblock %}

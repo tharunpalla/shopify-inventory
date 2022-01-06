@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+
+{% block head %}
+<title>Logistics Inventory</title>
+{% endblock %}
+
+{% block body %}
+<div class="inventory-body">
+    <div class="inventory-heading">
+        <h3>Update an item to Inventory</h3>
+    </div>
+    <form action="/update/{{inventory._id}}" method="POST" class="inventory-form">
+        <label class="inventory-add-label">Product Name:</label>
+        <input class="form-control" type="text" name="product_name" id="product_name" value={{inventory.product_name}}
+            required>
+        <label class="inventory-add-label">Product Category:</label>
+        <input class="form-control" type="text" name="product_category" id="product_category"
+            value={{inventory.product_category}} required>
+        <label class="inventory-add-label">Product Code:</label>
+        <input class="form-control" type="number" name="product_code" id="product_code" value={{inventory.product_code}}
+            required>
+        <label class="inventory-add-label">Available Units:</label>
+        <input class="form-control" type="number" name="available_units" id="available_units"
+            value={{inventory.available_units}} required>
+        <label class="inventory-add-label"></label>
+        <input type="submit" class="btn btn-info" value="Update">
+    </form>
+</div>
+{% endblock %}

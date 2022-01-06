@@ -1,0 +1,40 @@
+.inventory-heading{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1%;
+}
+.inventory-headline{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+}
+.inventory-form{
+    width: 50%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: baseline;
+    justify-content: center;
+}
+.inventory-table{
+    display: flex;
+    flex-direction: row;
+    margin: auto;
+    width: max-content;
+    padding: 0.5rem;
+}
+.inventory-add-label{
+    padding: 0.5rem 0.5rem 0.5rem 0rem;
+}
+.inventory-content-empty{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: auto;
+    margin: auto;
+    justify-content: center;
+    padding: 6%;
+}
