@@ -1,6 +1,16 @@
 # shopify-inventory - Shopify Backend Developer Intern Challenge - Summer 2022
 
-Logistic Inventory CRUD application 
+Logistic Inventory CRUD application that meets the following requirements listed below.
+
+### Requirements:
+Basic CRUD Functionality.
+1. Create inventory items
+2. Edit Them
+3. Delete Them
+4. View a list of them
+5. (Additional) Push a button export product data to a CSV
+
+
 
 ### How To Run
 
