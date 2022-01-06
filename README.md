@@ -28,7 +28,7 @@ $ virtualenv env
 
 3. Then run the command to activate the virtualenv:
 ```
-$ source env/bin/activate
+$ source env/bin/activate or .\env\Scripts\activate
 ```
 
 4. Then install the dependencies:
