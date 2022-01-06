@@ -48,3 +48,6 @@ if __name__ == "__main__":
     app.run(debug=True, port=<desired port>)
     
 Open http://localhost:5000/ on your browser to access the application
+```
+
+Alternately, the application is deployed on heroku. You can access it using : https://shopify-inventory-crud.herokuapp.com/
