@@ -28,17 +28,17 @@ $ virtualenv env
 
 3. Then run the command to activate the virtualenv:
 ```
-$ source env/bin/activate
+$ source env/bin/activate or .\env\Scripts\activate
 ```
 
 4. Then install the dependencies:
 ```
-$ (env) pip install -r requirements.txt
+$ pip install -r requirements.txt
 ```
 
 5. Finally start the web server:
 ```
-$ (env) python app.py
+$ python app.py
 ```
 
 This server will start on port 5000 by default. You can change this in `app.py` by changing the following line to this:
@@ -46,3 +46,8 @@ This server will start on port 5000 by default. You can change this in `app.py` 
 ```python
 if __name__ == "__main__":
     app.run(debug=True, port=<desired port>)
+    
+Open http://localhost:5000/ on your browser to access the application
+```
+
+#### Alternately, the application is deployed on heroku. You can access it using : https://shopify-inventory-crud.herokuapp.com/
