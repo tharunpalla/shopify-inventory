@@ -10,6 +10,7 @@ Basic CRUD Functionality.
 4. View a list of them
 5. (Additional) Push a button export product data to a CSV
 
+#### The application is deployed on heroku. You can access it using : https://shopify-inventory-crud.herokuapp.com/
 
 
 ### How To Run
@@ -49,5 +50,3 @@ if __name__ == "__main__":
     
 Open http://localhost:5000/ on your browser to access the application
 ```
-
-#### Alternately, the application is deployed on heroku. You can access it using : https://shopify-inventory-crud.herokuapp.com/
